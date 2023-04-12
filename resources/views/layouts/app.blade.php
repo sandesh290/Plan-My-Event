@@ -26,6 +26,7 @@
         .navbar-nav li {
             margin-left: 10px;
             margin-right: 10px;
+
         }
 
         .dropdown {
@@ -116,17 +117,25 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav" style="margin: 0 auto;">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="{{ url('/') }}">Home <span
+                                    <a style="color:black"
+                                        onMouseOver="this.style.color='#FF7800'"onMouseOut="this.style.color='black'"
+                                        class="nav-link" href="{{ url('/') }}">Home <span
                                             class="sr-only">(current)</span></a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ url('event-card') }}">Event</a>
+                                <li class="nav-item active">
+                                    <a style="color:black"
+                                        onMouseOver="this.style.color='#FF7800'"onMouseOut="this.style.color='black'"
+                                        class="nav-link" href="{{ url('event-card') }}">Event</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ url('aboutus') }}">About</a>
+                                    <a style="color:black"
+                                        onMouseOver="this.style.color='#FF7800'"onMouseOut="this.style.color='black'"
+                                        class="nav-link" href="{{ url('aboutus') }}">About</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ url('contact') }}">Contact Us</a>
+                                    <a style="color:black"
+                                        onMouseOver="this.style.color='#FF7800'"onMouseOut="this.style.color='black'"
+                                        class="nav-link" href="{{ url('contact') }}">Contact Us</a>
                                 </li>
                             </ul>
                             @if (auth()->check())

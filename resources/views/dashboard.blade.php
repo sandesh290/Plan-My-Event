@@ -24,7 +24,7 @@
                         <p>Total Profit Events</p>
                     </div>
                     <div class="icon">
-                        <i class="ion ion-bag"></i>
+                        <i class="fas fa-fw fa-money-bill"></i>
                     </div>
                     <a href="{{ url('/profit-events') }}" class="small-box-footer">More info <i
                             class="fas fa-arrow-circle-right"></i></a>
@@ -37,7 +37,7 @@
                         <p>Total Non Profit Events</p>
                     </div>
                     <div class="icon">
-                        <i class="ion ion-bag"></i>
+                        <i class="fa-solid fa-elementor "></i>
                     </div>
                     <a href="{{ url('/events') }}" class="small-box-footer">More info <i
                             class="fas fa-arrow-circle-right"></i></a>
@@ -51,22 +51,23 @@
                         <p>Total Users</p>
                     </div>
                     <div class="icon">
-                        <i class="ion ion-bag"></i>
+                        <i class="fas fa-fw fa-users"></i>
                     </div>
                     <a href="{{ url('/users') }}" class="small-box-footer">More info <i
                             class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
         </div>
-        <div class="row-3">
+        <div class="row">
             <div class="col-md-3">
                 <div class="small-box bg-primary">
                     <div class="inner">
                         <h3>{{ App\Models\Ticket::count() }}</h3>
                         <p>Total Tickets Sold</p>
                     </div>
+
                     <div class="icon">
-                        <i class="ion ion-bag"></i>
+                        <i class="fas fa-fw fa-ticket-alt"></i>
                     </div>
                     <a href="{{ url('/tickets') }}" class="small-box-footer">More info <i
                             class="fas fa-arrow-circle-right"></i></a>
@@ -79,13 +80,17 @@
                         <p>Registation For Non-Profit </p>
                     </div>
                     <div class="icon">
-                        <i class="ion ion-bag"></i>
+                        <i class="fas fa-fw fa-file-signature"></i>
                     </div>
                     <a href="{{ url('/event-registrations') }}" class="small-box-footer">More info <i
                             class="fas fa-arrow-circle-right"></i></a>
                 </div>
+
+
             </div>
         </div>
+    </div>
+
     </div>
 @stop
 
@@ -94,7 +99,5 @@
 @stop
 
 @section('js')
-    <script>
-        console.log('Hi!');
-    </script>
+
 @stop

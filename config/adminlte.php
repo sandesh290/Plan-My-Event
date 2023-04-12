@@ -304,22 +304,22 @@ return [
         [
             'text' => 'Dashboard',
             'url'  => '/dashboard',
-            'icon' => 'fas fa-fw fa fa-money',
+            'icon' => 'nav-icon fas fa-th',
         ],
         [
             'text' => 'Profit Events',
             'url'  => 'profit-events',
-            'icon' => 'fas fa-fw fa fa-money',
+            'icon' => 'fas fa-fw fa-money-bill',
         ],
         [
             'text' => 'Non Profit Events',
             'url'  => '/events',
-            'icon' => 'fas fa-fw fa-align-right',
+            'icon' => 'fas fa-fw fa-align-left',
         ],
         [
             'text' => 'Events Registration',
             'url'  => '/event-registrations',
-            'icon' => 'fas fa-fw fa-align-left'
+            'icon' => 'fas fa-fw fa-file-signature'
         ],
         [
             'text' => 'Tickets Sale',
@@ -329,7 +329,7 @@ return [
         [
             'text' => 'Users',
             'url'  => '/users',
-            'icon' => 'fas fa-fw fa-address-card',
+            'icon' => 'fas fa-fw fa-user',
         ],
         [
             'text' => 'profile',
