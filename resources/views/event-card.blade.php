@@ -39,7 +39,8 @@
                                 <h5 class="event-name">{{ $event->event_name }}</h5>
                                 <p class="event-location">{{ $event->event_location }}</p>
                                 <p class="event-date">Rs.{{ $event->ticket_price }}</p>
-                                <a class="btn btn-success" href="{{ url('/event-card/buyTicket/' . $event->id) }}">Buy
+                                <a style="background-color: #FF7800;border: transparent;" class="btn btn-success"
+                                    href="{{ url('/event-card/buyTicket/' . $event->id) }}">Buy
                                     Ticket</a>
                             </div>
                         </div>
@@ -64,7 +65,8 @@
                                 <h5 class="event-name">{{ $event->event_name }}</h5>
                                 <p class="event-location">{{ $event->event_location }}</p>
                                 <p class="event-date">2024-12-28</p>
-                                <a type="button" class="btn btn-success"
+                                <a style="background-color: #FF7800;border: transparent;" type="button"
+                                    class="btn btn-success"
                                     href="{{ url('/event-card/register/' . $event->id) }}">Register</a>
                             </div>
                         </div>

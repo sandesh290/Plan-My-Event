@@ -30,6 +30,7 @@
         }
 
         .dropdown {
+
             position: relative;
             display: inline-block;
         }
@@ -77,6 +78,7 @@
         }
 
         .contact-info-text p {
+
             margin-bottom: 0px;
         }
 
@@ -104,7 +106,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="font-size: 19px;">
+                    <nav class="navbar navbar-expand-lg navbar-light "
+                        style="background-color: #F3F9FA; font-size: 19px;">
                         <a class="navbar-brand" href="{{ url('/') }}">
                             <img src="{{ asset('photo/pme.png') }}" alt="Logo" width="100">
                         </a>
@@ -148,12 +151,14 @@
                                     <div class="dropdown-content">
                                         <form action="{{ route('logout') }}" method="POST">
                                             @csrf
-                                            <button class="btn btn-danger btn-sm">Logout</button>
+                                            <button style="background-color: #FF7800;"
+                                                class="btn btn-danger btn-sm">Logout</button>
                                         </form>
                                     </div>
                                 </div>
                             @else
-                                <a href="{{ url('/login') }}" class="btn btn-success">Login</a>
+                                <a style="background-color: #FF7800;  border: transparent;" href="{{ url('/login') }}"
+                                    class="btn btn-success">Login</a>
                             @endif
                         </div>
                     </nav>

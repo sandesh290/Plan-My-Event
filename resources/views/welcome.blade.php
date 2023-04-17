@@ -10,11 +10,17 @@
             <div class="carousel-inner">
                 @foreach ($sliders as $key => $slider)
                     <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                        <img class="d-block w-100" src="{{ $slider->getFirstMediaUrl() }}" alt="{{ $slider->event_name }}"
+                        <img style="background: #C04848;  /* fallback for old browsers */
+                        background: linear-gradient(rgb(72,0,72,0.8), rgb(192,72,72,0.8)),
+                            background: linear-gradient(rgb(72,0,72,0.8), rgb(192,72,72,0.8))"
+                            class="d-block w-100" src="{{ $slider->getFirstMediaUrl() }}" alt="{{ $slider->event_name }}"
                             height="600">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>{{ $slider->event_name }}</h5>
-                            <a class="btn btn-primary" href="{{ $slider->details() }}">View More</a>
+                            <h5 style="font-weight: 600; font-size: 30px;">
+                                {{ $slider->event_name }}</h5>
+                            <a style="background-color: #FF7800;" class="btn btn-primary"
+                                href="{{ $slider->details() }}">View
+                                More</a>
                         </div>
                     </div>
                 @endforeach
@@ -61,10 +67,12 @@
                                                     <div class="card-body">
                                                         <h4 class="card-title">{{ $event->event_name }}</h4>
                                                         @if (isset($event->ticket_price))
-                                                            <a href="{{ $event->details() }}"
-                                                                class="btn btn-success">Buy</a>
+                                                            <a style="background-color: #FF7800;  border: transparent;"
+                                                                href="{{ $event->details() }}" class="btn btn-success">Buy
+                                                                Tickets</a>
                                                         @else
-                                                            <a href="{{ $event->details() }}"
+                                                            <a style="background-color: #FF7800;  border: transparent;"
+                                                                href="{{ $event->details() }}"
                                                                 class="btn btn-success">Register</a>
                                                         @endif
 
@@ -159,7 +167,7 @@
             </div>
         </div>
 
-        <div style="padding: 10px;" class="row">
+        <div style="text-align: center; padding: 10px;" class="row">
             <div class="col-md-4">
                 <div class="contact-info">
                     <div class="contact-info-item">

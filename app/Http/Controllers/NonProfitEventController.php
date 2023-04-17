@@ -82,16 +82,20 @@ class NonProfitEventController extends Controller
     public function update(Request $request,$id)
     {
         $event = NonProfitEvent::find($id);
+
+
         $sanitized = $request->validate([
             'event_name' => 'required',
             'event_location' => 'required',
             'description' => 'required',
-            'photo' => 'required'
+            'photo' => 'nullable'
         ]);
 
         $event->update($sanitized);
-        $event->clearMediaCollection();
-        $event->addMedia($request->photo)->toMediaCollection();
+        if($request->has('photo')) {
+            $event->clearMediaCollection();
+            $event->addMedia($request->photo)->toMediaCollection();
+        }
         return redirect()->route('events.index')->with('success','Event Updated Successfully');
     }
 

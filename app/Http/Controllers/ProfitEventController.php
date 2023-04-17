@@ -87,11 +87,15 @@ class ProfitEventController extends Controller
             'event_location' => 'required',
             'description' => 'required',
             'ticket_price' => 'required',
-            'photo' => 'required',
+            'photo' => 'nullable',
         ]);
         $event->update($sanitized);
-        $event->clearMediaCollection();
-        $event->addMedia($request->photo)->toMediaCollection();
+
+        if($request->has('photo')) {
+
+            $event->clearMediaCollection();
+            $event->addMedia($request->photo)->toMediaCollection();
+        }
         return redirect()->route('profit-events.index')->with('success','Event Updated Successfully');
     }
 
