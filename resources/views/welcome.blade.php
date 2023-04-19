@@ -1,4 +1,12 @@
 @extends('layouts.app')
+@section('css')
+    <style>
+        .slider-image {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid #fff;
+        }
+    </style>
+@endsection
 @section('content')
     <section id="slider" class="pb-3">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -10,12 +18,9 @@
             <div class="carousel-inner">
                 @foreach ($sliders as $key => $slider)
                     <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                        <img style="background: #C04848;  /* fallback for old browsers */
-                        background: linear-gradient(rgb(72,0,72,0.8), rgb(192,72,72,0.8)),
-                            background: linear-gradient(rgb(72,0,72,0.8), rgb(192,72,72,0.8))"
-                            class="d-block w-100" src="{{ $slider->getFirstMediaUrl() }}" alt="{{ $slider->event_name }}"
-                            height="600">
-                        <div class="carousel-caption d-none d-md-block">
+                        <img style="" class="d-block w-100 " src="{{ $slider->getFirstMediaUrl() }}"
+                            alt="{{ $slider->event_name }}" height="600">
+                        <div class="carousel-caption d-none d-md-block slider-image">
                             <h5 style="font-weight: 600; font-size: 30px;">
                                 {{ $slider->event_name }}</h5>
                             <a style="background-color: #FF7800;" class="btn btn-primary"
@@ -176,8 +181,8 @@
                         </div>
                         <div style="color: #FF7800;" class="contact-info-text">
                             <h2>Address</h2>
-                            <span>1215 Lorem Ipsum, Ch 176080 </span>
-                            <span>Chandigarh , INDIA</span>
+                            <span>Shivalaya Chowk 33700 </span>
+                            <span>Pokhara , Nepal</span>
                         </div>
                     </div>
                 </div>

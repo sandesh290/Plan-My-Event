@@ -98,6 +98,7 @@
             width: 100%;
         }
     </style>
+    @yield('css')
 </head>
 
 <body style="background-color: #F3F9FA">
@@ -121,23 +122,23 @@
                             <ul class="navbar-nav" style="margin: 0 auto;">
                                 <li class="nav-item active">
                                     <a style="color:black"
-                                        onMouseOver="this.style.color='#FF7800'"onMouseOut="this.style.color='black'"
+                                        onMouseOver="this.style.color='#FF7800'"onMouseClick="this.style.color='#FF7800'"
                                         class="nav-link" href="{{ url('/') }}">Home <span
                                             class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item active">
                                     <a style="color:black"
-                                        onMouseOver="this.style.color='#FF7800'"onMouseOut="this.style.color='black'"
+                                        onMouseOver="this.style.color='#FF7800'"onMouseClick="this.style.color='black'"
                                         class="nav-link" href="{{ url('event-card') }}">Event</a>
                                 </li>
                                 <li class="nav-item">
                                     <a style="color:black"
-                                        onMouseOver="this.style.color='#FF7800'"onMouseOut="this.style.color='black'"
+                                        onMouseOver="this.style.color='#FF7800'"onMouseClick="this.style.color='#FF7800'"
                                         class="nav-link" href="{{ url('aboutus') }}">About</a>
                                 </li>
                                 <li class="nav-item">
                                     <a style="color:black"
-                                        onMouseOver="this.style.color='#FF7800'"onMouseOut="this.style.color='black'"
+                                        onMouseOver="this.style.color='#FF7800'"onMouseClick="this.style.color='#FF7800'"
                                         class="nav-link" href="{{ url('contact') }}">Contact Us</a>
                                 </li>
                             </ul>

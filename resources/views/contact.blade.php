@@ -102,8 +102,8 @@
                         </div>
                         <div style="color: #FF7800;" class="contact-info-text">
                             <h2>Address</h2>
-                            <span>1215 Lorem Ipsum, Ch 176080 </span>
-                            <span>Chandigarh , INDIA</span>
+                            <span>Shivalaya Chowk 33700 </span>
+                            <span>Pokhara , Nepal</span>
                         </div>
                     </div>
                 </div>

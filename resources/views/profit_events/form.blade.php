@@ -5,7 +5,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        Add Event
+                        Add Profit Event
                     </div>
                     <div class="card-body">
                         <form
