@@ -40,7 +40,6 @@
                                     <p class="text-danger">{{ $errors->first('phone') }}</p>
                                 @endif
                             </div>
-
                             <div class="form-group">
                                 <label for="email">Email</label>
                                 <input type="text" name="email" class="form-control" placeholder="Email"

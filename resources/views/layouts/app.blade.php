@@ -173,7 +173,6 @@
 
         @include('layouts.footer')
     </div>
-
     <form action="{{ route('logout') }}" method="POST" id="logout">
         @csrf
     </form>
