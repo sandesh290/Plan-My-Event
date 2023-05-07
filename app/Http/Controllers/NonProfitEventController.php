@@ -12,6 +12,7 @@ class NonProfitEventController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    // Show the listings of the non profit event
     public function index()
     {
         $events = NonProfitEvent::paginate(10);
@@ -19,7 +20,7 @@ class NonProfitEventController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a new non profit creation page.
      *
      * @return \Illuminate\Http\Response
      */

@@ -29,9 +29,8 @@
             </div>
             <div class="ticket-info">
                 <p class="date">
-                    <span>{{ $ticket->created_at->format('D') }}</span>
-                    <span class="june-29">{{ $ticket->created_at->format('M') }}</span>
-                    <span>{{ $ticket->created_at->format('Y') }}</span>
+                    <span>{{ $ticket->event->description }}</span>
+
                 </p>
                 <div class="show-name">
                     <h1>{{ $ticket->event->event_name }}</h1>

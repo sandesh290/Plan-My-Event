@@ -44,13 +44,8 @@
                             <div class="form-group">
                                 <label for="description">Event Date</label>
                                 <input name="description" id="description" class="form-control" rows="4"
-                                    placeholder="Event Date">
-                                @if (isset($event))
-                                    {{ $event->description }}
-                                @else
-                                    {{ old('description') }}
-                                @endif
-                                </textarea>
+                                    placeholder="Event Date" type="date"
+                                    value="{{ isset($event) ? $event->description : '' }}">
 
                                 @if ($errors->has('description'))
                                     <p class="text-danger">{{ $errors->first('description') }}</p>

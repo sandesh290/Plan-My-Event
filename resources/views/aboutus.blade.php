@@ -36,42 +36,93 @@
     <div class="row">
         <div class="column">
             <div class="card">
-                <img src="photo/pme.png " alt="Jane" style="width:50%; margin-left: 100px;">
+                <img src="photo/pme.png" alt="Jane" style="width: 50%; margin-left: 100px;">
                 <div class="container">
                     <h2>Jane Doe</h2>
                     <p class="title">CEO & Founder</p>
                     <p>Some text that describes me lorem ipsum ipsum lorem.</p>
                     <p>jane@example.com</p>
-                    <p><button class="button">Contact</button></p>
+
                 </div>
             </div>
         </div>
 
         <div class="column">
             <div class="card">
-                <img src="photo/pme.png" alt="Mike" style="width:50%; margin-left: 100px; ">
+                <img src="photo/pme.png" alt="Mike" style="width: 50%; margin-left: 100px;">
                 <div class="container">
                     <h2>Mike Ross</h2>
                     <p class="title">Art Director</p>
                     <p>Some text that describes me lorem ipsum ipsum lorem.</p>
                     <p>mike@example.com</p>
-                    <p><button class="button">Contact</button></p>
+
                 </div>
             </div>
         </div>
 
         <div class="column">
             <div class="card">
-                <img src="photo/pme.png" alt="John" style="width:50%; margin-left: 100px;">
+                <img src="photo/pme.png" alt="John" style="width: 50%; margin-left: 100px;">
                 <div class="container">
                     <h2>John Doe</h2>
                     <p class="title">Designer</p>
                     <p>Some text that describes me lorem ipsum ipsum lorem.</p>
                     <p>john@example.com</p>
-                    <p><button class="button">Contact</button></p>
+
                 </div>
             </div>
         </div>
     </div>
+
+    <style>
+        .row {
+            display: flex;
+            justify-content: center;
+        }
+
+        .column {
+            flex: 33.33%;
+            padding: 20px;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            padding: 2px 16px;
+        }
+
+        .card img {
+            border-radius: 5px 5px 0 0;
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .button {
+            background-color: #FF7800;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+    </style>
+
     </div>
 @endsection

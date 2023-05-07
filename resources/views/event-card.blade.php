@@ -19,14 +19,34 @@
                     </div>
                 @endif
             </div>
-            <div class="row py-4">
+            {{-- <div class="row py-4">
                 <div class="col-md-12">
                     <form action="{{ url('event-card') }}" method="GET">
                         <input type="search" class="form-control" name="search"
                             placeholder="Search the event by name, place etc" value="{{ request()->search ?? '' }}">
                     </form>
                 </div>
+            </div> --}}
+            <div class="input-group rounded">
+                <form id="search-form" action="{{ url('event-card') }}" method="GET">
+                    <input type="search" class="form-control" name="search"
+                        placeholder="Search the event by name, place etc" value="{{ request()->search ?? '' }}"
+                        style="width:400px">
+                </form>
+                <div style="padding: 5px">
+
+                </div>
+                <button id="search-button" class="input-group-text border-0 p-md-10" id="search-addon">
+                    <i class="fas fa-search"></i>
+                </button>
             </div>
+
+            <script>
+                document.getElementById('search-button').addEventListener('click', function() {
+                    document.getElementById('search-form').submit();
+                });
+            </script>
+            <hr>
             <div class="row">
                 <div class="col-md-12">
                     <h3>Profit Events</h3>
@@ -53,10 +73,12 @@
         </div>
 
         <div class="container pb-5">
+            <hr>
             <div class="row">
                 <div class="col-md-12">
                     <h3>Non Profit Events</h3>
                 </div>
+
                 @foreach ($nonProfitEvents as $event)
                     <div class="col-md-4">
                         <div class="card">

@@ -7,6 +7,7 @@ use App\Http\Controllers\ProfitEventController;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\TicketsController;
 use App\Http\Controllers\UsersController;
+use App\Mail\ContactUsMail;
 use App\Models\NonProfitEvent;
 use App\Models\ProfitEvent;
 use App\Models\Ticket;
@@ -55,6 +56,7 @@ Route::get('/aboutus', function () {
 
 
 
+
 Route::get('/slider', function () {
     return view('/slider/index');
 });
@@ -73,6 +75,12 @@ Route::get('/failed', [PagesController::class, 'failed'])->name('failed');
 Route::get('/contact', function () {
     return view('/contact');
 });
+
+Route::post('/contactus', function () {
+   \Mail::to('timilsinasandesh141@gmail.com')->send(new ContactUsMail(request()->all()));
+   return redirect()->back()->with('success','Message Send successfully');
+})->name('contactus');
+
 
 Route::resource('slider', SliderController::class);
 Auth::routes();

@@ -51,35 +51,44 @@
         }
     </style>
     <section style="box-shadow: 0px 5px 9px #adb5bd inset" class="contact py-5">
+        @if ($message = Session::get('success'))
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 style="color: green;">{{ $message }}</h3>
+                    </div>
+                </div>
+            </div>
+        @endif
         <div class="container">
             <div class="row about d-flex align-items-center">
                 <div class="col-md-7">
                     <img src="photo/contact.png " class="pic">
                 </div>
-                <div style="margin-top: 15px;" class="col-md-5">
-                    <div id="fcf-for">
-                        <h4 style="color:#FF7800;" class="fcf-h2">Contact us</h4>
+                <div class="col-md-5">
+                    <div id="fcf-form">
+                        <h4 style="color:#FF7800" class="fcf-h2">Contact us</h4>
                         <h3 class="fcf-h3">Write a message</h3>
-                        <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
-
+                        <form class="fcf-form-class" method="post" action="{{ route('contactus') }}" method="POST">
+                            @csrf
                             <div class="fcf-form-group">
                                 <label for="Name" class="fcf-label">Your name</label>
                                 <div class="fcf-input-group">
-                                    <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+                                    <input type="text" id="Name" name="name" class="fcf-form-control" required>
                                 </div>
                             </div>
 
                             <div class="fcf-form-group">
                                 <label for="Email" class="fcf-label">Your email address</label>
                                 <div class="fcf-input-group">
-                                    <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+                                    <input type="email" id="Email" name="email" class="fcf-form-control" required>
                                 </div>
                             </div>
 
                             <div class="fcf-form-group">
                                 <label for="Message" class="fcf-label">Your message</label>
                                 <div class="fcf-input-group">
-                                    <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+                                    <textarea id="Message" name="message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
                                 </div>
                             </div>
 
@@ -92,8 +101,8 @@
                 </div>
             </div>
         </div>
-
-        <div style="padding: 10px;" class="row">
+        <hr>
+        <div style="text-align: center; padding: 10px;" class="row">
             <div class="col-md-4">
                 <div class="contact-info">
                     <div class="contact-info-item">
@@ -102,8 +111,8 @@
                         </div>
                         <div style="color: #FF7800;" class="contact-info-text">
                             <h2>Address</h2>
-                            <span>Shivalaya Chowk 33700 </span>
-                            <span>Pokhara , Nepal</span>
+                            <span>Shivalaya Chowk 33700</span>
+                            <span>Pokhara, Nepal</span>
                         </div>
                     </div>
                 </div>
@@ -137,5 +146,30 @@
                 </div>
             </div>
         </div>
+
+        <style>
+            .contact-info-item {
+                background-color: #0E76BC;
+                border-radius: 10px;
+                padding: 20px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            .contact-info-icon {
+                font-size: 30px;
+                margin-bottom: 10px;
+            }
+
+            .contact-info-text h2 {
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 5px;
+            }
+
+            .contact-info-text span {
+                font-size: 14px;
+            }
+        </style>
+
     </section>
 @endsection

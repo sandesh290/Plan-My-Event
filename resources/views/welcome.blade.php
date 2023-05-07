@@ -7,6 +7,7 @@
         }
     </style>
 @endsection
+
 @section('content')
     <section id="slider" class="pb-3">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -18,14 +19,12 @@
             <div class="carousel-inner">
                 @foreach ($sliders as $key => $slider)
                     <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                        <img style="" class="d-block w-100 " src="{{ $slider->getFirstMediaUrl() }}"
-                            alt="{{ $slider->event_name }}" height="600">
+                        <img class="d-block w-100" src="{{ $slider->getFirstMediaUrl() }}" alt="{{ $slider->event_name }}"
+                            height="600">
                         <div class="carousel-caption d-none d-md-block slider-image">
-                            <h5 style="font-weight: 600; font-size: 30px;">
-                                {{ $slider->event_name }}</h5>
+                            <h5 style="font-weight: 600; font-size: 30px;">{{ $slider->event_name }}</h5>
                             <a style="background-color: #FF7800;" class="btn btn-primary"
-                                href="{{ $slider->details() }}">View
-                                More</a>
+                                href="{{ $slider->details() }}">View More</a>
                         </div>
                     </div>
                 @endforeach
@@ -41,6 +40,46 @@
         </div>
     </section>
 
+    <style>
+        #slider {
+            margin: 10px;
+        }
+
+        .carousel-inner {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .carousel-item img {
+            object-fit: cover;
+        }
+
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            border-radius: 5px;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+        }
+
+        .carousel-caption h5 {
+            color: #fff;
+            font-weight: 600;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .carousel-caption a.btn-primary {
+            background-color: #FF7800;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+    </style>
+
+    <hr>
     <section class="pt-5 pb-5">
         <div class="container">
             <div class="row">
@@ -93,8 +132,8 @@
             </div>
         </div>
     </section>
-
-    <section style="box-shadow: 0px 5px 9px #adb5bd inset" class="about-us">
+    <hr>
+    <section class="about-us">
         <div class="about">
             <div class="col-md-7">
                 <img style="width: 500px;
@@ -124,7 +163,7 @@
         </div>
     </section>
 
-
+    <hr>
     <section class="contact">
         <div class="container">
             <div class="row about d-flex align-items-center">
@@ -169,7 +208,7 @@
                 </div>
             </div>
         </div>
-
+        <hr>
         <div style="text-align: center; padding: 10px;" class="row">
             <div class="col-md-4">
                 <div class="contact-info">
@@ -179,8 +218,8 @@
                         </div>
                         <div style="color: #FF7800;" class="contact-info-text">
                             <h2>Address</h2>
-                            <span>Shivalaya Chowk 33700 </span>
-                            <span>Pokhara , Nepal</span>
+                            <span>Shivalaya Chowk 33700</span>
+                            <span>Pokhara, Nepal</span>
                         </div>
                     </div>
                 </div>
@@ -214,5 +253,30 @@
                 </div>
             </div>
         </div>
+
+        <style>
+            .contact-info-item {
+                background-color: #0E76BC;
+                border-radius: 10px;
+                padding: 20px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            .contact-info-icon {
+                font-size: 30px;
+                margin-bottom: 10px;
+            }
+
+            .contact-info-text h2 {
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 5px;
+            }
+
+            .contact-info-text span {
+                font-size: 14px;
+            }
+        </style>
+
     </section>
 @endsection
