@@ -174,7 +174,8 @@
                     <div id="fcf-form">
                         <h4 style="color:#FF7800" class="fcf-h2">Contact us</h4>
                         <h3 class="fcf-h3">Write a message</h3>
-                        <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+                        <form id="fcf-form-id" class="fcf-form-class" method="post" action="{{ route('contactus') }}"
+                            method="POST">
 
                             <div class="fcf-form-group">
                                 <label for="Name" class="fcf-label">Your name</label>
